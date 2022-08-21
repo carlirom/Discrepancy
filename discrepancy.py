@@ -45,6 +45,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.title("Discrepancy")
 st.write(df_discrepancy.groupby("Retail_Product_Level1Name").sum())
 
+import matplotlib.pyplot as plt
 #plot  Pie chart
 df_discrepancy.groupby("Retail_Product_Level1Name").sum()["Retail_CCQTY"].plot(kind="pie", autopct="%1.1f%%", figsize=(6,6))
 st.pyplot()
